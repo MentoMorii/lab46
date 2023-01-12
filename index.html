@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЛР4-6</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="header-PIB">ТР-12 Дудар Віталій Олегович</h1>
+      <p class="header-task">Адаптивний веб-дизайн. Flexbox</p>
+    </header>
+    <main class="background-img">
+      <div class="container">
+        <form class="form">
+          <div class="user-data">
+            <label class="form-field ording">
+              <span class="form-label">Ім'я</span>
+              <input type="text" class="input-name input-opc" name="name" id="name" />
+            </label>
+            <label class="form-field">
+              <span class="form-label">Група</span>
+              <input type="text" class="input-group input-opc" name="group" id="group" />
+            </label>
+          </div>
+          <div class="main__inputs">
+            <div class="radio-checkbox">
+              <div class="radio-buttons">
+                <p class="radio-task">Що таке Flex-контейнер?</p>
+                <label>
+                  <input
+                    type="radio"
+                    name="box-type"
+                    value="0"
+                    class="input-radio input-opc"
+                    checked
+                  />
+                  Дочірній елемент, у якому містяться flex-айтеми.
+                </label>
+                <label>
+                  <input type="radio" name="box-type" value="1" class="input-radio input-opc" />
+                  Батьківський елемент, у якому містяться flex-айтеми.
+                </label>
+                <p class="radio-task">Як зробити елемент флекс-контейнером?</p>
+                <label>
+                  <input
+                    type="radio"
+                    name="pseudo-class"
+                    value="0"
+                    class="input-radio input-opc"
+                    checked
+                  />
+                  flex: block;
+                </label>
+                <label>
+                  <input type="radio" name="pseudo-class" value="1" class="input-radio input-opc" />
+                  display: flex;
+                </label>
+              </div>
+              <div class="checkboxes">
+                <p class="checkboxes-task">
+                  У наступних завданнях можливі дві правильні відповіді. Значення які може приймати
+                  align-items .
+                </p>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="pseudo-class"
+                    value="1"
+                    class="input-checkbox input-opc"
+                  />
+                  stretch
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="pseudo-class"
+                    value="0"
+                    class="input-checkbox input-opc"
+                  />
+                  order:
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="pseudo-class"
+                    value="1"
+                    class="input-checkbox input-opc"
+                  />
+                  center
+                </label>
+                <span class="checkbox-down">Які існують вісі в Flex-контейнера</span>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="pseudo-class2"
+                    value="1"
+                    class="input-checkbox input-opc"
+                  />
+                  Основна
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="pseudo-class2"
+                    value="0"
+                    class="input-checkbox input-opc"
+                  />
+                  Діагональна
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="pseudo-class2"
+                    value="1"
+                    class="input-checkbox input-opc"
+                  />
+                  Поперечна
+                </label>
+              </div>
+            </div>
+            <div class="numbersAndSelect">
+              <div class="numbers-questions">
+                <div>
+                  <label>
+                    Скільки сторін є у елементів?:
+                    <input
+                      type="number"
+                      name="sides"
+                      min="0"
+                      max="8"
+                      step="1"
+                      class="input-number input-opc"
+                    />
+                  </label>
+                </div>
+
+                <div>
+                  <label>
+                    Кількість базових варіантів властивості flex-direction
+                    <input
+                      type="number"
+                      name="flex-direction"
+                      min="0"
+                      max="5"
+                      step="1"
+                      value="0"
+                      class="input-number input-opc"
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div class="selects">
+                <p class="selects-task">
+                  Оберіть існуючі значення властивості для зміни порядку розташування flex елементів
+                </p>
+                <label for="changeFlexPosition"></label>
+                <select
+                  id="changeFlexPosition"
+                  name="changeFlexPosition"
+                  class="upper select-quiz input-opc"
+                >
+                  <option selected>change-to</option>
+                  <option>position</option>
+                  <option value="1">order</option>
+                </select>
+              </div>
+
+              <div class="datalists">
+                <p>Cпеціальна властивість для відступів між flex-айтеми</p>
+                <label for="position-value"></label>
+                <input
+                  list="flex-indentation"
+                  name="flex-indentation"
+                  class="upper input-datalist input-opc"
+                />
+                <datalist id="flex-indentation">
+                  <option>margin</option>
+                  <option>gap</option>
+                  <option>padding</option>
+                </datalist>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="form-button" data-modal-open>Відправити</button>
+        </form>
+      </div>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button type="button" class="button-close" data-modal-close>
+            <svg width="11px" height="11px" class="close-icon">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+          <p class="modal-text"></p>
+        </div>
+      </div>
+    </main>
+    <script src="./js/mailer.js" type="module"></script>
+    <script src="./js/getingScore.js" type="module"></script>
+    <script src="./js/modal.js" type="module"></script>
+  </body>
+
+  <!-- <script src="./js/lab.js" type="module"></script> -->
+</html>
